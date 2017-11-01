@@ -15,7 +15,7 @@
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
-    "@angular/core": "^4.2.4",
+    "@angular/core": "^5.0.0",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
     "@angular/material": "^2.0.0-beta.7",
