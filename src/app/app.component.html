@@ -1,353 +1,381 @@
-<md-sidenav-container [class.m2app-dark]="isDarkTheme">
+<mat-sidenav-container [class.m2app-dark]="isDarkTheme">
 
-  <md-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
-    <md-toolbar>
+  <mat-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
+    <mat-toolbar>
       <span>Settings</span>
       <span class="app-toolbar-filler"></span>
-      <md-icon class="example-icon">build</md-icon>
+      <mat-icon class="example-icon">build</mat-icon>
 
 
-      <md-toolbar-row>
-        <button md-button (click)="isDarkTheme = !isDarkTheme" class="app-sidebar-button">TOGGLE THEME</button>
-      </md-toolbar-row>
+      <mat-toolbar-row>
+        <button mat-button (click)="isDarkTheme = !isDarkTheme" class="app-sidebar-button">TOGGLE THEME</button>
+      </mat-toolbar-row>
 
-     <md-toolbar-row>
+      <mat-toolbar-row>
         <span>Account</span>
         <span class="app-toolbar-filler"></span>
-        <md-icon class="example-icon">account_circle</md-icon>
-      </md-toolbar-row>
+        <mat-icon class="example-icon">account_circle</mat-icon>
+      </mat-toolbar-row>
 
-      <md-toolbar-row>
-        <button md-raised-button color="accent" class="app-sidebar-button">
-            <md-icon class="example-icon">verified_user</md-icon>
-            Login            
-           </button>
-      </md-toolbar-row>
+      <mat-toolbar-row>
+        <button mat-raised-button color="accent" class="app-sidebar-button">
+          <mat-icon class="example-icon">verified_user</mat-icon>
+          Login
+        </button>
+      </mat-toolbar-row>
 
-      <md-toolbar-row>
+      <mat-toolbar-row>
         <span>Favorites</span>
         <span class="app-toolbar-filler"></span>
-        <md-icon class="example-icon">favorite</md-icon>
-      </md-toolbar-row>
+        <mat-icon class="example-icon">favorite</mat-icon>
+      </mat-toolbar-row>
 
-      <md-toolbar-row>
-        <button md-raised-button color="warn" class="app-sidebar-button">
-             <md-icon class="example-icon">delete</md-icon>
-             Delete
-           </button>
-      </md-toolbar-row>
+      <mat-toolbar-row>
+        <button mat-raised-button color="warn" class="app-sidebar-button">
+          <mat-icon class="example-icon">delete</mat-icon>
+          Delete
+        </button>
+      </mat-toolbar-row>
 
-    </md-toolbar>
-  </md-sidenav>
+    </mat-toolbar>
+  </mat-sidenav>
 
-  <md-toolbar color="primary">
-    <button md-button class="app-menu-button" (click)="sidenav.toggle()">
+  <mat-toolbar color="primary">
+    <button mat-button class="app-menu-button" (click)="sidenav.toggle()">
       <i class="material-icons">menu</i>
     </button>
     <span class="title">Angular Material Demo</span>
-  </md-toolbar>
+  </mat-toolbar>
 
   <div class="app-content">
 
     <!-- Material Button -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Button</h2>
-        <button class="app-button" md-button>FLAT</button>
-        <button class="app-button" md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
-        <button class="app-button" md-raised-button color="primary">PRIMARY RAISED</button>
-        <button class="app-button" md-raised-button color="accent">ACCENT RAISED</button>
-      </md-card-content>
-    </md-card>
+        <button class="app-button" mat-button>FLAT</button>
+        <button class="app-button" mat-raised-button mat-tooltip="This is a tooltip!">RAISED</button>
+        <button class="app-button" mat-raised-button color="primary">PRIMARY RAISED</button>
+        <button class="app-button" mat-raised-button color="accent">ACCENT RAISED</button>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Button -->
 
     <!-- Material Chip List -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Chips</h2>
-        <md-chip-list>
-          <md-chip *ngFor="let chipColor of availableColors" selected="true" color="{{chipColor.color}}">
+        <mat-chip-list>
+          <mat-chip *ngFor="let chipColor of availableColors" selected="true" color="{{chipColor.color}}">
             {{chipColor.name}}
-          </md-chip>
-        </md-chip-list>
-      </md-card-content>
-    </md-card>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Chip List -->
 
     <!-- Material Checkbox -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Checkbox</h2>
-        <md-checkbox color="warn">Unchecked</md-checkbox>
-        <md-checkbox [checked]="true">Checked</md-checkbox>
-        <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
-        <md-checkbox [disabled]="true">Disabled</md-checkbox>
-      </md-card-content>
-    </md-card>
+        <mat-checkbox color="warn">Unchecked</mat-checkbox>
+        <mat-checkbox [checked]="true">Checked</mat-checkbox>
+        <mat-checkbox [indeterminate]="true">Indeterminate</mat-checkbox>
+        <mat-checkbox [disabled]="true">Disabled</mat-checkbox>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Checkbox -->
 
     <!-- Material Radio Button -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Radio Button</h2>
-        <md-radio-button name="symbol">Alpha</md-radio-button>
-        <md-radio-button name="symbol">Beta</md-radio-button>
-        <md-radio-button name="symbol" disabled>Disabled</md-radio-button>
-      </md-card-content>
-    </md-card>
+        <mat-radio-button name="symbol">Alpha</mat-radio-button>
+        <mat-radio-button name="symbol">Beta</mat-radio-button>
+        <mat-radio-button name="symbol" disabled>Disabled</mat-radio-button>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Radio Button -->
 
     <!-- Material Input -->
-    <md-card class="app-input-section">
-      <md-card-content>
+    <mat-card class="app-input-section">
+      <mat-card-content>
         <h2 class="example-h2">Material Input</h2>
-        <md-input-container>
-          <input mdInput placeholder="First name" />
-        </md-input-container>
-        <md-input-container>
-          <input mdInput #nickname placeholder="Nickname" maxlength="50" />
-          <md-hint align="end">
+        <mat-form-field>
+          <input matInput placeholder="First name" />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput #nickname placeholder="Nickname" maxlength="50" />
+          <mat-hint align="end">
             {{nickname.value.length}} / 50
-          </md-hint>
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="Favorite phone">
-          <span md-prefix>
-        <i class="material-icons app-input-icon">android</i>
-        &nbsp;
-        </span>
-        </md-input-container>
-        <md-input-container>
-          <input mdInput placeholder="Motorcycle model">
-          <span md-prefix>
-          <i class="material-icons app-input-icon">motorcycle</i>
-          &nbsp;
-        </span>
-        </md-input-container>
-      </md-card-content>
-    </md-card>
+          </mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix class="app-input-icon">android</mat-icon>
+          <input matInput placeholder="Favorite phone">
+        </mat-form-field>
+        <mat-form-field>
+
+          <mat-icon matPrefix class="app-input-icon">motorcycle</mat-icon>
+          <input matInput placeholder="Motorcycle model">
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Input -->
 
     <!-- Material Select -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Select</h2>
-        <md-select placeholder="Favorite game" [(ngModel)]="selectedValue" name="game">
-          <md-option *ngFor="let game of games" [value]="game.value">
-            {{game.viewValue}}
-          </md-option>
-        </md-select>
+        <mat-form-field>
+          <mat-select placeholder="Favorite game" [(ngModel)]="selectedValue" name="game">
+            <mat-option *ngFor="let game of games" [value]="game.value">
+              {{game.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
         <p> Selected value: {{selectedValue}} </p>
-      </md-card-content>
-    </md-card>
+
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Select -->
 
     <!-- Material List -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material List</h2>
-        <md-list class="app-list">
-          <md-list-item *ngFor="let food of foods">
-            <h3 md-line>{{food.name}}</h3>
-            <p md-line class="demo-secondary-text">{{food.rating}}</p>
-          </md-list-item>
-        </md-list>
-      </md-card-content>
-    </md-card>
+        <mat-list class="app-list">
+          <mat-list-item *ngFor="let food of foods">
+            <h3 mat-line>{{food.name}}</h3>
+            <p mat-line class="demo-secondary-text">{{food.rating}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material List -->
 
     <!-- Material Grid List -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Grid List</h2>
-        <md-grid-list cols="4" rowHeight="100px">
-          <md-grid-tile class="grid-test-1" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile class="grid-test-1" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
             {{tile.text}}
-          </md-grid-tile>
-        </md-grid-list>
-      </md-card-content>
-    </md-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Grid List -->
 
     <!-- Material Spinner -->
-    <md-card>
-      <md-card-content>
-        <h2 class="example-h2">Material Spinner</h2>
-        <md-spinner class="app-spinner"></md-spinner>
-        <md-spinner color="accent" class="app-spinner"></md-spinner>
-      </md-card-content>
-    </md-card>
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Progress spinner configuration</h2>
+
+        <section class="example-section">
+          <label class="example-margin">Color:</label>
+          <mat-radio-group [(ngModel)]="color">
+            <mat-radio-button class="example-margin" value="primary">
+              Primary
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="accent">
+              Accent
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="warn">
+              Warn
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section class="example-section">
+          <label class="example-margin">Mode:</label>
+          <mat-radio-group [(ngModel)]="mode">
+            <mat-radio-button class="example-margin" value="determinate">
+              Determinate
+            </mat-radio-button>
+            <mat-radio-button class="example-margin" value="indeterminate">
+              Indeterminate
+            </mat-radio-button>
+          </mat-radio-group>
+        </section>
+
+        <section class="example-section" *ngIf="mode == 'determinate'">
+          <label class="example-margin">Progress:</label>
+          <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+        </section>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Result</h2>
+
+        <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+        </mat-progress-spinner>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Spinner -->
 
     <!-- Material Progress Bar -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Progress Bar</h2>
         <label>
-        Indeterminate progress-bar
-        <md-progress-bar
-            class="app-progress"
-            mode="indeterminate"
-            aria-label="Indeterminate progress-bar example"></md-progress-bar>
-      </label>
+          Indeterminate progress-bar
+          <mat-progress-bar class="app-progress" mode="indeterminate" aria-label="Indeterminate progress-bar example"></mat-progress-bar>
+        </label>
         <label>
-        Determinate progress bar - {{progress}}%
-        <md-progress-bar
-            class="app-progress"
-            color="accent"
-            mode="determinate"
-            [value]="progress"
-            aria-label="Determinate progress-bar example"></md-progress-bar>
-      </label>
-      </md-card-content>
-    </md-card>
+          Determinate progress bar - {{progress}}%
+          <mat-progress-bar class="app-progress" color="accent" mode="determinate" [value]="progress" aria-label="Determinate progress-bar example"></mat-progress-bar>
+        </label>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Progress Bar -->
 
     <!-- Material Tab -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Tab</h2>
-        <md-tab-group>
-          <md-tab label="Air Nomads">
+        <mat-tab-group>
+          <mat-tab label="Air Nomads">
             <p>The Air Nomads were a civilization composed of people who practiced the art of airbending. While nomadic, Air
               Nomads did inhabit four major air temples, each built on remote locations, only easily reachable with flying
               bison. The Air Nomads were a highly spiritual group of people.</p>
-          </md-tab>
-          <md-tab label="Water Tribe">
+          </mat-tab>
+          <mat-tab label="Water Tribe">
             <p>The Water Tribe is a collective term for people, some of whom practice the art of waterbending, who follow a
               government system in the form of a tribal chiefdom. Although members of the Water Tribe typically inhabit the
               polar regions, the North Pole and the South Pole, there is a small population of waterbenders who inhabit the
               Foggy Swamp in Earth Kingdom territory. The two main tribes are the Northern Water Tribe at the North Pole
               and the Southern Water Tribe at the South Pole.</p>
-          </md-tab>
-          <md-tab label="Earth Kingdom">
+          </mat-tab>
+          <mat-tab label="Earth Kingdom">
             <p>The Earth Kingdom is a massive continent led by an earth monarch and is home to people who practice the art of
               earthbending. Being the largest of the four nations, it is ethnically diverse with a variance of customs and
               cultural traditions. The people of the Earth Kingdom are strong and persistent. The geography of the Earth
               Kingdom varies tremendously, ranging from wooded forests to blazing deserts, mountainous terrain, and grassy
               plains.
             </p>
-          </md-tab>
-          <md-tab label="Fire Nation">
+          </mat-tab>
+          <mat-tab label="Fire Nation">
             <p>The Fire Nation is home to people who practice the art of firebending and is an absolute monarchy led by the
               Fire Lord. Being composed of several major islands and located on the equator, the nation is considered to
               be an archipelago. Its economy is the largest and most powerful in the world with a strong industrial sector
               and advanced technological developments. The climate is normally humid and warm which allows for a diversity
               of flora and fauna to thrive.</p>
-          </md-tab>
-        </md-tab-group>
-      </md-card-content>
-    </md-card>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Tab -->
 
-    <md-card>
-      <md-icon>build</md-icon>
-    </md-card>
+    <mat-card>
+      <mat-icon>build</mat-icon>
+      <mat-icon>android</mat-icon>
+    </mat-card>
 
     <!-- Material Slider -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Slider :: Configuration</h2>
 
         <section class="example-section">
-          <md-input-container class="example-margin">
-            <input mdInput type="number" placeholder="Value" [(ngModel)]="slider.value">
-          </md-input-container>
-          <md-input-container class="example-margin">
-            <input mdInput type="number" placeholder="Min value" [(ngModel)]="slider.min">
-          </md-input-container>
-          <md-input-container class="example-margin">
-            <input mdInput type="number" placeholder="Max value" [(ngModel)]="slider.max">
-          </md-input-container>
-          <md-input-container class="example-margin">
-            <input mdInput type="number" placeholder="Step size" [(ngModel)]="slider.step">
-          </md-input-container>
+          <mat-input-container class="example-margin">
+            <input matInput type="number" placeholder="Value" [(ngModel)]="slider.value">
+          </mat-input-container>
+          <mat-input-container class="example-margin">
+            <input matInput type="number" placeholder="Min value" [(ngModel)]="slider.min">
+          </mat-input-container>
+          <mat-input-container class="example-margin">
+            <input matInput type="number" placeholder="Max value" [(ngModel)]="slider.max">
+          </mat-input-container>
+          <mat-input-container class="example-margin">
+            <input matInput type="number" placeholder="Step size" [(ngModel)]="slider.step">
+          </mat-input-container>
         </section>
 
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="slider.showTicks">Show ticks</md-checkbox>
-          <md-checkbox class="example-margin" [(ngModel)]="slider.autoTicks" *ngIf="slider.showTicks">
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.showTicks">Show ticks</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.autoTicks" *ngIf="slider.showTicks">
             Auto ticks
-          </md-checkbox>
-          <md-input-container class="example-margin" *ngIf="slider.showTicks && !slider.autoTicks">
-            <input mdInput type="number" placeholder="Tick interval" [(ngModel)]="slider.tickInterval">
-          </md-input-container>
+          </mat-checkbox>
+          <mat-input-container class="example-margin" *ngIf="slider.showTicks && !slider.autoTicks">
+            <input matInput type="number" placeholder="Tick interval" [(ngModel)]="slider.tickInterval">
+          </mat-input-container>
         </section>
 
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="slider.thumbLabel">Show thumb label</md-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.thumbLabel">Show thumb label</mat-checkbox>
         </section>
 
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="slider.checked">Checked</md-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.checked">Checked</mat-checkbox>
         </section>
 
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="slider.vertical">Vertical</md-checkbox>
-          <md-checkbox class="example-margin" [(ngModel)]="slider.invert">Inverted</md-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.vertical">Vertical</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.invert">Inverted</mat-checkbox>
         </section>
 
         <section class="example-section">
-          <md-checkbox class="example-margin" [(ngModel)]="slider.disabled">Disabled</md-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="slider.disabled">Disabled</mat-checkbox>
         </section>
-      </md-card-content>
+      </mat-card-content>
 
-      <md-card-content>
+      <mat-card-content>
         <h2 class="example-h2">Slider Result</h2>
-        <md-slider class="example-margin" [disabled]="slider.disabled" [invert]="slider.invert" [max]="slider.max" [min]="slider.min"
+        <mat-slider class="example-margin" [disabled]="slider.disabled" [invert]="slider.invert" [max]="slider.max" [min]="slider.min"
           [step]="slider.step" [thumb-label]="slider.thumbLabel" [tick-interval]="slider.tickInterval" [value]="slider.value"
           [vertical]="slider.vertical">
-        </md-slider>
-      </md-card-content>
+        </mat-slider>
+      </mat-card-content>
 
-      <md-card-content>
+      <mat-card-content>
         <h2 class="example-h2">Slider Toggle Result</h2>
-        <md-slide-toggle [disabled]="slider.disabled" [checked]="slider.checked" (change)="slider.checked = !slider.checked">Slide me!</md-slide-toggle>
-      </md-card-content>
+        <mat-slide-toggle [disabled]="slider.disabled" [checked]="slider.checked" (change)="slider.checked = !slider.checked">Slide me!</mat-slide-toggle>
+      </mat-card-content>
 
-    </md-card>
+    </mat-card>
     <!-- /Material Slider -->
 
     <!-- Material Menu -->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Menu</h2>
-        <button md-icon-button [mdMenuTriggerFor]="menu">
-        <md-icon>more_vert</md-icon>
-      </button>
-        <md-menu #menu="mdMenu">
-          <button md-menu-item>
-          <md-icon>dialpad</md-icon>
-          <span>Redial</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
         </button>
-          <button md-menu-item disabled>
-          <md-icon>voicemail</md-icon>
-          <span>Check voicemail</span>
-        </button>
-          <button md-menu-item>
-          <md-icon>notifications_off</md-icon>
-          <span>Disable alerts</span>
-        </button>
-        </md-menu>
-      </md-card-content>
-    </md-card>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Menu-->
 
     <!-- Material Dialog-->
-    <md-card>
-      <md-card-content>
+    <mat-card>
+      <mat-card-content>
         <h2 class="example-h2">Material Dialog</h2>
         <p>Last dialog result: {{lastDialogResult}}</p>
-        <button md-raised-button (click)="openDialog()">DIALOG</button>
-        <button md-raised-button (click)="showSnackbar()">SNACKBAR</button>
-      </md-card-content>
-    </md-card>
+        <button mat-raised-button (click)="openDialog()">DIALOG</button>
+        <button mat-raised-button (click)="showSnackbar()">SNACKBAR</button>
+      </mat-card-content>
+    </mat-card>
     <!-- /Material Dialog-->
+    <!-- Material Fab-->
+    <button mat-fab class="app-fab">
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </button>
+    <!-- /Material Fab-->
   </div>
-</md-sidenav-container>
-
-<!-- Material Fab-->
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>check circle</md-icon></button>
-</span>
-<!-- /Material Fab-->
+</mat-sidenav-container>

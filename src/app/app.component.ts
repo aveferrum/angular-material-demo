@@ -1,5 +1,5 @@
 import { Component, Optional } from '@angular/core';
-import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 
 
 @Component({
@@ -56,7 +56,7 @@ export class AppComponent {
     { name: 'Warn', color: 'warn' }
   ];
 
-  constructor(private _dialog: MdDialog, private _snackbar: MdSnackBar) {
+  constructor(private _dialog: MatDialog, private _snackbar: MatSnackBar) {
     // Update the value for the progress-bar on an interval.
     setInterval(() => {
       this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
@@ -96,5 +96,5 @@ export class AppComponent {
   `,
 })
 export class DialogContentComponent {
-  constructor( @Optional() public dialogRef: MdDialogRef<DialogContentComponent>) { }
+  constructor( @Optional() public dialogRef: MatDialogRef<DialogContentComponent>) { }
 }

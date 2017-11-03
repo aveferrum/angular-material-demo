@@ -1,4 +1,4 @@
-md-sidenav-container.m2app-dark {
+mat-sidenav-container.m2app-dark {
   background: black;
 }
 
@@ -6,7 +6,7 @@ md-sidenav-container.m2app-dark {
   padding: 5px;
 }
 
-.app-content md-card {
+.app-content mat-card {
   margin: 5px;
 }
 
@@ -14,7 +14,7 @@ md-sidenav-container.m2app-dark {
   min-width: 200px;
 }
 
-.app-content md-checkbox {
+.app-content mat-checkbox {
   margin: 10px;
 }
 
@@ -23,9 +23,8 @@ md-sidenav-container.m2app-dark {
 }
 
 
-.app-action {
-  display: inline-block;
-  position: fixed;
+.app-fab {
+  position: fixed !important;
   bottom: 20px;
   right: 20px;
 }
@@ -38,6 +37,7 @@ md-sidenav-container.m2app-dark {
 
 .app-input-icon {
   font-size: 16px;
+  padding: 0 5px;
 }
 
 .app-menu-button {
@@ -80,7 +80,7 @@ md-sidenav-container.m2app-dark {
   height: 300px;
 }
 
-md-chip {
+mat-chip {
   max-width: 200px;
 }
 

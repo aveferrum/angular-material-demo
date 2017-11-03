@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+
+import { AppMaterialModule } from './app.material.module';
 import { AppComponent, DialogContentComponent } from './app.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    MaterialModule,
+    AppMaterialModule,
     BrowserAnimationsModule
   ],
   declarations: [AppComponent, DialogContentComponent],
