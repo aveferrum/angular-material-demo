@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.800.6",
-    "@angular/cli": "^8.3.19",
+    "@angular/cli": "^9.0.0",
     "@angular/compiler-cli": "^8.2.14",
     "@types/hammerjs": "^2.0.36",
     "@types/jasmine": "^2.8.16",
