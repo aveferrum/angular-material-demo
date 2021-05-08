@@ -1,0 +1,9 @@
+services:
+  - xvfb
+addons:
+  chrome: stable
+language: node_js
+node_js:
+  - node
+script:
+    - ng test --watch=false
